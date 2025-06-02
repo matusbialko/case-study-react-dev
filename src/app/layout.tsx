@@ -19,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${openSans.className} font-[Arial] antialiased`}
-      >
+      <body>
         {children}
       </body>
     </html>
