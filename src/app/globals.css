@@ -1,50 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f2f2f2;
-  --foreground: #000000;
-  --primary-color: #ff4100;
+	--background: #f2f2f2;
+	--foreground: #000000;
+	--primary-color: #ff4100;
+	--danger-color: #e02b27;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary-color);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-primary: var(--primary-color);
+	--color-danger: var(--danger-color);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .title-orange {
-  @apply font-bold text-primary text-xl
+	@apply font-bold text-primary text-xl
 }
 .title-black {
-  @apply font-bold text-black text-xl
+	@apply font-bold text-black text-xl
 }
 
 .register-container {
-  @apply max-w-[940px];
+	@apply max-w-full md:max-w-[940px];
 }
 
 .login-container {
-  @apply max-w-[650px];
+	@apply max-w-full md:max-w-[650px];
 }
 
 .input-field {
-  @apply border-2 border-black hover:border-[#757779] px-3.5 w-full outline-none;
-  box-shadow: 0 2px 8px rgba(57, 56, 56, .25);
-  transition: box-shadow, border-color .4s ease-in-out;
+	@apply border-2 border-black hover:border-[#757779] px-3.5 w-full outline-none;
+	box-shadow: 0 2px 8px rgba(57, 56, 56, .25);
+	transition: box-shadow, border-color .4s ease-in-out;
 }
 
 .btn-primary {
-  @apply w-full h-12.5 bg-primary hover:bg-[#cc3400] text-white uppercase cursor-pointer;
+	@apply w-full h-12.5 bg-primary hover:bg-[#cc3400] text-white font-bold uppercase cursor-pointer;
 }
 
 a {
-  @apply text-primary hover:text-[#cc3400];
+	@apply text-primary hover:text-[#cc3400];
 }
