@@ -50,3 +50,14 @@ body {
 a {
 	@apply text-primary hover:text-[#cc3400];
 }
+
+.dropdown-arrow {
+	@apply flex border-black border-2 bg-white absolute;
+	width: 14px;
+	height: 14px;
+	right: 35px;
+	top: -7px;
+	border-top-color: white;
+	border-right-color: white;
+	transform: translate(50%) rotate(-225deg);
+}

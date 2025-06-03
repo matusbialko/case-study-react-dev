@@ -5,9 +5,9 @@ import { useEffect } from 'react'
 
 export default function Home() {
 	useEffect(() => {
-		const userToken = localStorage.getItem('userToken');
+		const userData = localStorage.getItem('userData');
 
-		if (userToken) {
+		if (userData) {
 			redirect('/products')
 		} else {
 			redirect('/login')

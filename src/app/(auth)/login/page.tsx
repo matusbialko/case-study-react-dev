@@ -36,7 +36,10 @@ export default function Login() {
 
             const data = await response.json()
             if (!data?.token) throw new Error('Login failed')
-            localStorage.setItem('userToken', data?.token)
+            localStorage.setItem('userData', JSON.stringify({
+                token: data?.token,
+                username: username
+            }))
         } catch (error) {
             console.error(error)
             setErrorMessage(error?.message)
