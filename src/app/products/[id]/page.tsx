@@ -1,5 +1,5 @@
-import Image from "next/image"
-import ProductRating from "@/app/_components/product-rating"
+import Image from 'next/image'
+import ProductRating from '@/app/_components/product-rating'
 
 export type Product = {
     id: number

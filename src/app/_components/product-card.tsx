@@ -1,6 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
-import ProductRating from "./product-rating"
+import Image from 'next/image'
+import Link from 'next/link'
+import ProductRating from './product-rating'
 
 type ProductCardProps = {
 	id: number,

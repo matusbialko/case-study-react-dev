@@ -1,4 +1,4 @@
-import ProductCard from "@/app/_components/product-card"
+import ProductCard from '@/app/_components/product-card'
 
 export type Product = {
     id: number

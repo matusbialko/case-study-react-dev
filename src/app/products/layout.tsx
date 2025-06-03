@@ -1,8 +1,8 @@
 'use client'
 
-import Image from "next/image"
+import Image from 'next/image'
 import { useState } from 'react'
-import { redirect } from "next/navigation"
+import { redirect } from 'next/navigation'
 
 export default function AuthLayout({
 	children,

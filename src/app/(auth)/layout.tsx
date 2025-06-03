@@ -1,7 +1,7 @@
 'use client'
 
-import Image from "next/image"
-import { usePathname } from "next/navigation"
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import React, { createContext, useContext, useState } from 'react'
 
 type LoadingContextType = {
