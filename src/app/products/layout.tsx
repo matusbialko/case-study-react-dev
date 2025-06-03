@@ -38,6 +38,7 @@ export default function AuthLayout({
                     <div
                         onMouseEnter={openDropdown}
                         onMouseLeave={closeDropdown}
+                        onTouchEnd={() => setShowDropdown(false)}
                         className="relative h-6 flex flex-row justify-center items-center gap-2 cursor-pointer"
                     >
                         <p className="text-primary">{username}</p>
