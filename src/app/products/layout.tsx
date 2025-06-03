@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useState } from 'react'
+import { redirect } from "next/navigation"
 
 export default function AuthLayout({
 	children,
@@ -17,11 +18,17 @@ export default function AuthLayout({
         setShowDropdown(true)
         clearTimeout(dropdownDebounce)
     }
+
     const closeDropdown = () => {
         clearTimeout(dropdownDebounce)
         dropdownDebounce = setTimeout(() => {
             setShowDropdown(false)
         }, 500)
+    }
+
+    const logout = () => {
+        localStorage.removeItem('userData')
+        redirect('/')
     }
 
 	return (
@@ -53,7 +60,7 @@ export default function AuthLayout({
                                 className="absolute top-5 right-0 w-42 bg-white border-2 border-black mt-2 z-30"
                             >
                                 <div className="dropdown-arrow" />
-                                <div className="relative w-full h-8 flex flex-row items-center p-2 bg-white hover:bg-gray-300 z-50">
+                                <div onClick={logout} className="relative w-full h-8 flex flex-row items-center p-2 bg-white hover:bg-gray-300 z-50">
                                     <strong>Log out</strong>
                                 </div>
                             </div>
