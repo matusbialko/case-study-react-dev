@@ -25,10 +25,9 @@ export default function AuthLayout({
 	const [loading, setLoading] = useState(false)
 
 	return (
-		<div className="flex flex-col items-center">
-			<div className="w-full h-screen flex flex-col items-center bg-white md:bg-transparent">
+		<div className="w-full flex flex-col items-center">
+			<div className="w-full min-h-screen flex flex-col items-center bg-white md:bg-transparent">
 				<header className="w-full flex flex-col items-center">
-					<div className="w-full h-12 bg-black" />
 					<div className={`
 						${pathname == '/login' ? 'login-container' : 'register-container'}
 						w-full h-17.5 md:h-35 flex flex-col justify-start items-start p-5 pb-2.5 md:p-5
@@ -56,9 +55,6 @@ export default function AuthLayout({
 					{children}
 				</LoadingContext.Provider>
 			</div>
-			<footer className="w-full h-12 flex flex-row justify-center items-center bg-black text-white">
-				<p className="text-sm">2014 - 2025 GymBeam</p>
-			</footer>
 		</div>
 	)
 }
