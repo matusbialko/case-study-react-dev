@@ -20,6 +20,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h2 {
-  @apply font-bold text-primary text-[1.4rem]
+.title-orange {
+  @apply font-bold text-primary text-xl
+}
+.title-black {
+  @apply font-bold text-black text-xl
+}
+
+.register-container {
+  @apply max-w-[940px];
+}
+
+.login-container {
+  @apply max-w-[650px];
+}
+
+.input-field {
+  @apply border-2 border-black hover:border-[#757779] px-3.5 w-full outline-none;
+  box-shadow: 0 2px 8px rgba(57, 56, 56, .25);
+  transition: box-shadow, border-color .4s ease-in-out;
+}
+
+.btn-primary {
+  @apply w-full h-12.5 bg-primary hover:bg-[#cc3400] text-white uppercase cursor-pointer;
+}
+
+a {
+  @apply text-primary hover:text-[#cc3400];
 }
